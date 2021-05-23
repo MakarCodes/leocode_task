@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/leocode_task/static/css/main.ade7a2cf.chunk.css",
+    "main.js": "/leocode_task/static/js/main.0e4320b8.chunk.js",
+    "main.js.map": "/leocode_task/static/js/main.0e4320b8.chunk.js.map",
+    "runtime-main.js": "/leocode_task/static/js/runtime-main.9e00e196.js",
+    "runtime-main.js.map": "/leocode_task/static/js/runtime-main.9e00e196.js.map",
+    "static/css/2.679831fc.chunk.css": "/leocode_task/static/css/2.679831fc.chunk.css",
+    "static/js/2.b1fb5697.chunk.js": "/leocode_task/static/js/2.b1fb5697.chunk.js",
+    "static/js/2.b1fb5697.chunk.js.map": "/leocode_task/static/js/2.b1fb5697.chunk.js.map",
+    "index.html": "/leocode_task/index.html",
+    "static/css/2.679831fc.chunk.css.map": "/leocode_task/static/css/2.679831fc.chunk.css.map",
+    "static/css/main.ade7a2cf.chunk.css.map": "/leocode_task/static/css/main.ade7a2cf.chunk.css.map",
+    "static/js/2.b1fb5697.chunk.js.LICENSE.txt": "/leocode_task/static/js/2.b1fb5697.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9e00e196.js",
+    "static/css/2.679831fc.chunk.css",
+    "static/js/2.b1fb5697.chunk.js",
+    "static/css/main.ade7a2cf.chunk.css",
+    "static/js/main.0e4320b8.chunk.js"
+  ]
+}
