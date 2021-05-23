@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// Import custom hooks
+import { useFetchLogic } from './utilities/customHooks/useFetchLogic';
+import { useSearchLogic } from './utilities/customHooks/useSearchLogic';
 
-function App() {
+// Import variables
+import { USERS_URL, INITIAL_USERS_DATA } from './helpers/variables';
+
+// Import components
+import Spinner from './components/UI/Spinner';
+import UsersList from './components/UsersList';
+import SearchInput from './components/SearchInput/SearchInput';
+
+// Import styles
+import classes from './styles.module.scss';
+
+const App = () => {
+  const { data, isLoading, isError } = useFetchLogic(
+    USERS_URL,
+    INITIAL_USERS_DATA
+  );
+
+  const { searchPhrase, searchOnChange } = useSearchLogic();
+
+  const renderFilteredUsers = data.filter(({ name }) =>
+    name.toLowerCase().includes(searchPhrase.toLowerCase())
+  );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.Wrapper}>
+      <h1 className={classes.Title}>Users List</h1>
+      <div className={classes.Content}>
+        <SearchInput
+          searchPhrase={searchPhrase}
+          searchOnChange={searchOnChange}
+        />
+        {!isLoading ? <UsersList users={renderFilteredUsers} /> : <Spinner />}
+        {!isLoading && isError && (
+          <p>Sorry, error has occured. Please try later.</p>
+        )}
+      </div>
     </div>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,25 @@
+.Item {
+  font-size: 1.6rem;
+  text-align: left;
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+.Lp {
+  color: gray;
+  &::after {
+    content: '. ';
+  }
+}
+
+.Name {
+  font-weight: 700;
+}
+
+.Username {
+  color: gray;
+  &::before {
+    content: ' @';
+  }
+}
