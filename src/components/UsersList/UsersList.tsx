@@ -17,9 +17,11 @@ const UsersList: React.FC<IProps> = ({ users }) => {
   return (
     <>
       {users.length ? (
-        <div className={classes.List}>{renderUsersList}</div>
+        <div className={classes.List} data-testid='users-list'>
+          {renderUsersList}
+        </div>
       ) : (
-        <p>No results...</p>
+        <p data-testid='no-results'>No results...</p>
       )}
     </>
   );
