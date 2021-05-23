@@ -1,6 +1,6 @@
 ## General info
 
-Simple CRUD application which includes:
+Simple task which includes:
 
 - fetching data
 - filtering data by name
