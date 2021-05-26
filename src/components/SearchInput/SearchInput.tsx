@@ -5,7 +5,7 @@ import classes from './styles.module.scss';
 
 interface IProps {
   searchPhrase: string;
-  searchOnChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  searchOnChange: (value: string) => void;
 }
 
 const SearchInput: React.FC<IProps> = ({ searchPhrase, searchOnChange }) => (
@@ -13,7 +13,7 @@ const SearchInput: React.FC<IProps> = ({ searchPhrase, searchOnChange }) => (
     type='text'
     placeholder='Search'
     value={searchPhrase}
-    onChange={e => searchOnChange(e)}
+    onChange={e => searchOnChange(e.target.value)}
     className={classes.StyledInput}
   />
 );

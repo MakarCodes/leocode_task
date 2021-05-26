@@ -19,11 +19,7 @@ const App = () => {
     INITIAL_USERS_DATA
   );
 
-  const { searchPhrase, searchOnChange } = useSearchLogic();
-
-  const renderFilteredUsers = data.filter(({ name }) =>
-    name.toLowerCase().includes(searchPhrase.toLowerCase())
-  );
+  const { searchPhrase, searchOnChange, renderFilteredUsers } = useSearchLogic(data);
 
   return (
     <div className={classes.Wrapper}>

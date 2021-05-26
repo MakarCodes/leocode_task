@@ -11,15 +11,15 @@ interface IProps {
 }
 
 const UsersList: React.FC<IProps> = ({ users }) => {
-  const renderUsersList = users.map(({ id, name, username }, index) => (
-    <User key={id} name={name} username={username} number={index + 1} />
+  const renderUsersList = users.map(({ id, name, username }) => (
+    <User key={id} name={name} username={username} />
   ));
   return (
     <>
       {users.length ? (
-        <div className={classes.List} data-testid='users-list'>
+        <ul className={classes.List} data-testid='users-list'>
           {renderUsersList}
-        </div>
+        </ul>
       ) : (
         <p data-testid='no-results'>No results...</p>
       )}

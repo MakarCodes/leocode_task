@@ -4,13 +4,16 @@
   &:not(:last-child) {
     margin-bottom: 1rem;
   }
-}
-
-.Lp {
-  color: gray;
-  &::after {
-    content: '. ';
-  }
+  counter-increment: user-list;
+   &::before {
+   margin-right: 10px;
+   content: counter(user-list);
+   border-radius: 100%;
+   color: white;
+   width: 1.2em;
+   text-align: center;
+   display: inline-block;
+ }
 }
 
 .Name {
